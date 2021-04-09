@@ -29,13 +29,13 @@ class TC_Renter_SuccessfulLogin(unittest.TestCase):
             # attempt to find the 'logout' - if found, logged in
             logout_link = driver.find_element_by_xpath("/html/body/section/div[1]/div[1]/div/div[2]/div/ul/li/div/a[2]").text
             if "Logout" in logout_link:
-                print("User Successfully logged in")
+                print("TC_Renter_SuccessfulLogin - User Successfully logged in")
                 assert True
             else:
                 assert False
 
         except NoSuchElementException:
-            self.fail("Login Failed - user may not exist")
+            self.fail("TC_Renter_SuccessfulLogin - Login Failed - user may not exist")
             assert False
 
         try:
@@ -43,13 +43,14 @@ class TC_Renter_SuccessfulLogin(unittest.TestCase):
             greetings = driver.find_element_by_xpath(
                 "/html/body/section/div[1]/div[1]/div/div[2]/div/ul/li/div/a[1]").text
             if "Hello "+ user in greetings:
-                print("User Name is displayed correctly")
+                print("TC_Renter_SuccessfulLogin - User Name is displayed correctly")
                 assert True
             else:
+                print("TC_Renter_SuccessfulLogin - User Name is not displayed correctly")
                 assert False
 
         except NoSuchElementException:
-            self.fail("User Name is displayed incorrectly")
+            self.fail("NoSuchElementException")
             assert False
 
 

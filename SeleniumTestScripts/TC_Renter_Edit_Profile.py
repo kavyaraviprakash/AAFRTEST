@@ -47,10 +47,10 @@ class TC_Renter_Edit_Profile(unittest.TestCase):
         try:
             # attempt to find the 'username' - when user logs in
             if updatedemail == actualupdatedemail:
-                print("User Profile Successfully Updated and Validated")
+                print("TC_Renter_Edit_Profile - User Profile Successfully Updated and Validated")
                 assert True
             else:
-                print("User Profile is not Updated as expected")
+                print("TC_Renter_Edit_Profile - User Profile is not Updated as expected")
                 assert False
 
         except NoSuchElementException:

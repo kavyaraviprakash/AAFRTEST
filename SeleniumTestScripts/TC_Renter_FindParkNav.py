@@ -47,21 +47,21 @@ class TC_Renter_FindParkNav(unittest.TestCase):
                 time.sleep(3)
                 jcp = list(driver.find_elements_by_xpath("//div/center/a"))
                 if "1-Jerry Basketball court" in jcp[1].text:
-                    print("1-Jerry Basketball court link present")
+                    print("TC_Renter_FindParkNav - 1-Jerry Basketball court link present")
                     jcp[1].click()
                     time.sleep(3)
                     elem = driver.current_url
                     if elem == bbcourturl:
-                        print("User Successfully naviageted to Rent BBCourt page")
+                        print("TC_Renter_FindParkNav - User Successfully naviageted to Rent BBCourt page")
                         assert True
                     else:
-                        print("User was not successfully naviageted to Rent BBCourt page")
+                        print("TC_Renter_FindParkNav - User was not successfully naviageted to Rent BBCourt page")
                 else:
-                    print("1-Jerry Basketball court link not present")
+                    print("TC_Renter_FindParkNav - 1-Jerry Basketball court link not present")
                     assert False
 
             else:
-                print("Jerry Cline Park is notlisted in the table")
+                print("TC_Renter_FindParkNav - Jerry Cline Park is not listed in the table")
                 assert False
 
 

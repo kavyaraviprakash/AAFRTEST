@@ -29,18 +29,15 @@ class TC_Renter_UnsuccessfulLogin(unittest.TestCase):
             # attempt to find the 'logout' - if found, logged in
             errormsg = driver.find_element_by_xpath("/html/body/section/div[2]/div/form").text
             if expected_msg in errormsg:
-                print("Validation Successful")
+                print("TC_Renter_UnsuccessfulLogin - Invalid Username/Password Validation Successful")
                 assert True
             else:
-                print("Validation Unsuccessful")
+                print("TC_Renter_UnsuccessfulLogin - Invalid Username/Password Validation unsuccessful")
                 assert False
 
         except NoSuchElementException:
             self.fail("NoSuchElementException")
             assert False
-
-
-        driver.quit()
 
 
     @classmethod

@@ -33,13 +33,13 @@ class TC_Renter_Navbar_links_validation(unittest.TestCase):
             # attempt to find the ParkList Title
             FindParkPage = driver.current_url
             if "https://dry-reef-78127.herokuapp.com/view/" in FindParkPage:
-                print("User is navigated to Find a Park Page")
+                print("TC_Renter_Navbar_links_validation - User is navigated to Find a Park Page")
                 assert True
             else:
                 assert False
 
         except NoSuchElementException:
-            self.fail("User is not navigated to Find a Park Page")
+            self.fail("TC_Renter_Navbar_links_validation - User is not navigated to Find a Park Page")
             assert False
         # Navigation to Events Calendar Page
         elem = driver.find_element_by_xpath("/html/body/section/div[1]/div[2]/div/div/div/div/div/nav/div[2]/ul/li[3]/a")
@@ -53,13 +53,13 @@ class TC_Renter_Navbar_links_validation(unittest.TestCase):
             Expected_MonthYear = currentMonth +" "+ currentYear
             Month = driver.find_element_by_xpath("/html/body/section/div[2]/center/table/tbody/tr[1]/th").text
             if Expected_MonthYear in Month:
-                print("User is navigated to Events Calendar Page and calendar is displayed for:"+Expected_MonthYear)
+                print("TC_Renter_Navbar_links_validation - User is navigated to Events Calendar Page and calendar is displayed for:"+Expected_MonthYear)
                 assert True
             else:
                 assert False
 
         except NoSuchElementException:
-            self.fail("Either User is not navigated to Events Calendar Page or calendar is not current month and year, displayed calendar month and year is:"+Expected_MonthYear)
+            self.fail("TC_Renter_Navbar_links_validation - Either User is not navigated to Events Calendar Page or calendar is not current month and year, displayed calendar month and year is:"+Expected_MonthYear)
             assert False
         # Navigation to Contact Us Page
         elem = driver.find_element_by_xpath("/html/body/section/div[1]/div[2]/div/div/div/div/div/nav/div[2]/ul/li[4]/a")
@@ -69,13 +69,13 @@ class TC_Renter_Navbar_links_validation(unittest.TestCase):
             # attempt to find the ParkList Title
             ContactPage = driver.current_url
             if "https://dry-reef-78127.herokuapp.com/contact_page/" in ContactPage:
-                print("User is navigated to Contact Page")
+                print("TC_Renter_Navbar_links_validation - User is navigated to Contact Page")
                 assert True
             else:
                 assert False
 
         except NoSuchElementException:
-            self.fail("User is not navigated to Contact Page")
+            self.fail("TC_Renter_Navbar_links_validation - User is not navigated to Contact Page")
             assert False
         elem = driver.find_element_by_xpath(
             "/html/body/section/div[1]/div[2]/div/div/div/div/div/nav/div[2]/ul/li[1]/a")
@@ -85,13 +85,13 @@ class TC_Renter_Navbar_links_validation(unittest.TestCase):
             # attempt to find the ParkList Title
             HomePage = driver.current_url
             if "https://dry-reef-78127.herokuapp.com/renters_homepage/" in HomePage:
-                print("User is navigated to Home Page")
+                print("TC_Renter_Navbar_links_validation - User is navigated to Home Page")
                 assert True
             else:
                 assert False
 
         except NoSuchElementException:
-            self.fail("User is not navigated to Home Page")
+            self.fail("TC_Renter_Navbar_links_validation - User is not navigated to Home Page")
             assert False
 
     @classmethod

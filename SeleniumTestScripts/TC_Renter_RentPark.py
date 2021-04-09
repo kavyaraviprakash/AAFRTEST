@@ -75,11 +75,11 @@ class TC_Renter_RentPark(unittest.TestCase):
         try:
             elem = driver.find_element_by_xpath("//div/h1").text
             if (elem == "Payment Sucessful !!!"):
-                print("Albuquerque Athletic Field Reservation Successful")
+                print("TC_Renter_RentPark - Albuquerque Athletic Field Reservation Successful")
                 assert True
 
             else:
-                print("Albuquerque Athletic Field Reservation Unsuccessful")
+                print("TC_Renter_RentPark - Albuquerque Athletic Field Reservation Unsuccessful")
                 assert False
 
         except NoSuchElementException:

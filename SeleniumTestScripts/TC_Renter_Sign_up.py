@@ -21,7 +21,7 @@ class TC_Renter_Sign_up(unittest.TestCase):
         elem.click()
         time.sleep(5)
         elem = driver.find_element_by_xpath("/html/body/section/div[2]/div/form/table/tbody/tr[1]/td/input")
-        elem.send_keys("testrenter_1")
+        elem.send_keys("testrenter_3")
         elem = driver.find_element_by_xpath("/html/body/section/div[2]/div/form/table/tbody/tr[2]/td/input")
         elem.send_keys("kavyaravi39@gmail.com")
         elem = driver.find_element_by_xpath("/html/body/section/div[2]/div/form/table/tbody/tr[3]/td/input")
@@ -44,10 +44,10 @@ class TC_Renter_Sign_up(unittest.TestCase):
 
         elem = driver.current_url
         if elem == homepage:
-            print("Submit button on SignUp page Navigated user to Home Page Verified")
+            print("TC_Renter_Sign_up - Submit button on SignUp page Navigated user to Home Page Verified")
             assert True
         else:
-            print("User is not navigated to HomePage as expected.Instead navigated to" + elem)
+            print("TC_Renter_Sign_up - User is not navigated to HomePage as expected.Instead navigated to" + elem)
             assert False
 
     @classmethod
